@@ -30,6 +30,9 @@ jobs:
       - name: Create SPA fallback
         run: cp dist/index.html dist/404.html
 
+      - name: Create .nojekyll
+        run: touch dist/.nojekyll
+
       - name: Deploy to gh-pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
